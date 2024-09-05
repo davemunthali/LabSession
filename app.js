@@ -42,6 +42,12 @@ app.get("/region_data", (req, res)=>{
         }
     });
 });
+app.get("/data",(req, res)=>{
+   res.send("Hello world, this a special greeting from the server side");
+});
+app.post("/data",(req,res)=>{
+    res.redirect('/data');
+});
 app.listen(PORT, ()=>{
     console.log(`server started listening on port ${PORT}`);
 });
